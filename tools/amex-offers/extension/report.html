@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Amex offer report</title>
+    <link rel="stylesheet" href="report.css" />
+    <script src="analysis.js" defer></script>
+    <script src="report.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="brand">AO <span>Amex Offers · Your report</span></div>
+      <div class="actions">
+        <button id="csv">Export CSV</button
+        ><button id="html">Save report</button
+        ><button id="print">Print / PDF</button>
+      </div>
+    </header>
+    <main>
+      <div class="intro">
+        <div>
+          <p class="eyebrow">MAKE THE OFFERS USEFUL</p>
+          <h1>Know what to use next.</h1>
+          <p id="metadata">Loading your saved offers…</p>
+        </div>
+        <label class="date"
+          >Analyze as of<input id="asof" type="date" /><small
+            >Default: today in Central time</small
+          ></label
+        >
+      </div>
+      <p id="coverage" class="notice" role="status"></p>
+      <div id="stats" class="stats"></div>
+      <p class="principle">
+        Start with purchases you already plan to make. Returns below are
+        potential offer rewards, not realized savings. Cash and points are
+        ranked separately; base card rewards are excluded.
+      </p>
+      <div class="recommendations">
+        <section>
+          <h2>Use soon</h2>
+          <p>Within 30 days. Planned purchases first, then expiry.</p>
+          <div id="soon"></div>
+        </section>
+        <section>
+          <h2>Best cash value</h2>
+          <p>Highest return at qualifying spend; planned purchases first.</p>
+          <div id="cashbest"></div>
+        </section>
+        <section>
+          <h2>Best points value</h2>
+          <p>Bonus Membership Rewards points per dollar.</p>
+          <div id="pointsbest"></div>
+        </section>
+      </div>
+      <section class="list">
+        <div class="listheading">
+          <h2>Every captured offer</h2>
+          <span id="visiblecount"></span>
+        </div>
+        <div class="filters">
+          <label
+            >Find a merchant<input
+              id="search"
+              type="search"
+              placeholder="Search merchant or description" /></label
+          ><label
+            >Reward type<select id="kind">
+              <option value="all">All offers</option>
+              <option value="cash">Cash rewards</option>
+              <option value="points">Points rewards</option>
+              <option value="other">Needs review</option>
+            </select></label
+          ><label
+            >Sort by<select id="sort">
+              <option value="soon">Expires first</option>
+              <option value="cash">Cash return</option>
+              <option value="points">Points per dollar</option>
+              <option value="spend">Lowest required spend</option>
+            </select></label
+          ><label
+            >Spending limit ($)<input
+              id="budget"
+              type="number"
+              min="0"
+              step="1"
+              placeholder="No limit" /></label
+          ><label class="check"
+            ><input id="plannedonly" type="checkbox" />Only planned
+            purchases</label
+          ><label class="check"
+            ><input id="expired" type="checkbox" />Include expired</label
+          >
+        </div>
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Planned</th>
+                <th>Merchant & offer</th>
+                <th>Use by</th>
+                <th>Qualifying spend</th>
+                <th>Reward</th>
+                <th>Value</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody id="offers"></tbody>
+          </table>
+        </div>
+      </section>
+      <footer>
+        <p>
+          This snapshot reads the visible offer summaries for the selected card.
+          Open View Details on Amex for full terms, eligible transactions,
+          channels, exclusions, remaining uses, and posting deadlines. Caps
+          assume no previous redemptions; this report does not read transactions
+          or track consumption.
+        </p>
+        <p>
+          Everything stays in this browser. You can save this report as HTML or
+          CSV, or print it to PDF.
+          <button id="clear">Clear local reports</button>
+        </p>
+        <p id="error" role="alert"></p>
+      </footer>
+    </main>
+  </body>
+</html>
