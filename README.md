@@ -3,7 +3,13 @@
 [![Checks](https://github.com/KarT-yl/practical-automations/actions/workflows/ci.yml/badge.svg)](https://github.com/KarT-yl/practical-automations/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Small tools that remove repetitive work and turn information into something useful. Includes **MyTE Hours Filler** and **Amex Offers — One Click + Reports**, with source, setup instructions, and tests.
+Small tools that remove repetitive work and turn information into something useful. Includes **MyTE Hours Filler**, **Amex Offers — One Click + Reports**, and the **Natural Voice Editor** writing skill.
+
+## Natural Voice Editor
+
+The reusable writing instructions I use to preserve my voice, remove generic phrasing, and check that edits stay faithful to my facts. Includes an exact copy of the skill, a downloadable ZIP, a before-and-after example, and guidance for using its instructions in ChatGPT or Claude.
+
+**[Get the skill and usage instructions](skills/natural-voice-editor)**
 
 ## MyTE Hours Filler
 
