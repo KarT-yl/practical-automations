@@ -5,6 +5,7 @@ const path = require('node:path');
 process.chdir(path.resolve(__dirname, '..'));
 mkdirSync('artifacts', { recursive: true });
 for (const name of [
+  'myte',
   'analysis',
   'background',
   'extension',

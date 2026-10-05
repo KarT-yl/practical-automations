@@ -2,7 +2,7 @@
 
 ## Install in Opera GX
 
-1. Download the extension ZIP from the [latest GitHub release](https://github.com/KarT-yl/practical-automations/releases/latest) and extract it. Keep the extracted folder somewhere permanent.
+1. Download the extension ZIP from the [latest GitHub release](https://github.com/KarT-yl/practical-automations/releases/tag/v2.0.1) and extract it. Keep the extracted folder somewhere permanent.
 2. Open `opera://extensions` in Opera GX.
 3. Turn on **Developer mode**, then click **Load unpacked**.
 4. Select the extracted `amex-offers-one-click` folder containing `manifest.json`. If you downloaded or cloned the whole repository, select `tools/amex-offers/extension` instead.

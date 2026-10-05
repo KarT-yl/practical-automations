@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>MyTE hours</h1>
+      <p class="sub">Fills the Working Hours window for every weekday.</p>
+    </header>
+
+    <section class="grid">
+      <label>Start<input type="time" id="start" /></label>
+      <label>End<input type="time" id="end" /></label>
+      <label>Lunch from<input type="time" id="lunchStart" /></label>
+      <label>Lunch to<input type="time" id="lunchEnd" /></label>
+    </section>
+    <p id="total" class="total"></p>
+    <p id="timeError" class="err" role="alert"></p>
+
+    <label class="block"
+      >Days off
+      <input type="text" id="skip" placeholder="11/26, 11/27" />
+      <span class="hint"
+        >Holidays or PTO this period. These are left unchanged.</span
+      >
+    </label>
+
+    <label class="check"
+      ><input type="checkbox" id="addLines" /> Add the afternoon line (+)
+      automatically</label
+    >
+
+    <p class="hint">
+      Existing weekday values may be replaced. Review your actual hours before
+      saving in MyTE.
+    </p>
+    <button id="run">Fill working hours</button>
+    <div id="status" aria-live="polite"></div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

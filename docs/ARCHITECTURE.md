@@ -39,7 +39,7 @@ Cash and points are never converted into one unit. Expired offers, unverified en
 
 ## Tests
 
-`npm test` runs six suites:
+`npm test` runs the MyTE input-validation and synthetic DOM suite, plus six Amex suites:
 
 1. Calculation/date boundaries and recommendation eligibility.
 2. Background routing, sender validation, storage, and messages.
@@ -48,4 +48,4 @@ Cash and points are never converted into one unit. Expired offers, unverified en
 5. Report filters, planned purchases, ranking, HTML escaping, and CSV formula protection.
 6. A genuinely loaded extension with isolated content scripts, background messages, saved-list navigation, persistence, and report tabs.
 
-Every automated Amex page is intercepted and replaced with synthetic HTML. Only the integration test's temporary copy receives a fixture host permission; the shipped manifest does not. The real Opera GX enrollment workflow and a complete saved-list scan were also checked during development. Automated fixtures cannot guarantee compatibility after Amex changes its page structure.
+Every automated Amex page is intercepted and replaced with synthetic HTML. Only the integration test's temporary copy receives a fixture host permission; the shipped manifest does not. The October 5 update reran automated fixtures, not authenticated Amex or MyTE sessions. Automated fixtures cannot guarantee compatibility after either site changes its page structure.

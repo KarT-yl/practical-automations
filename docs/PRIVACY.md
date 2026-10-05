@@ -1,6 +1,8 @@
 # Privacy
 
-The shipped extension requests `activeTab`, `scripting`, and `storage`. It has no broad host permissions and runs when you click its icon on an eligible Amex page.
+The Amex extension requests `activeTab`, `scripting`, and `storage`. It has no broad host permissions and runs when you click its icon on an eligible Amex page.
+
+MyTE v1.0.2 uses the same three permissions, with no persistent host permission. It stores schedule preferences and excluded month/day dates in local browser storage and changes controls only when you click Fill on the MyTE page. It does not save or submit timesheets or send data to a reporting service. The preserved original v1.0.1 uses browser-sync settings and a MyTE host permission; it is included for source fidelity, separately from the improved version.
 
 Offer snapshots contain merchant names, visible descriptions, expiry text, captured original summary text, and enrollment status. The latest ten snapshots and planned-purchase selections are stored in `chrome.storage.local`. This is local storage, not browser sync. A temporary scan-start timestamp is stored in session storage.
 

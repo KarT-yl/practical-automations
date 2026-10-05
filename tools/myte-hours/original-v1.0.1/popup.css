@@ -1,0 +1,29 @@
+:root { --ink:#1d2430; --muted:#5b6472; --line:#d6dae1; --bg:#ffffff; --field:#f6f7f9; --accent:#24477a; --accent-hover:#1b375e; --ok:#1f6b3a; --ok-bg:#e8f3ec; --warn:#7a4b00; --warn-bg:#fdf3e1; --bad:#9b1c1c; --bad-bg:#fbeaea; }
+@media (prefers-color-scheme: dark) { :root { --ink:#e8ebf0; --muted:#a3abb8; --line:#3a4150; --bg:#1c2029; --field:#252a35; --accent:#7ea6e0; --accent-hover:#9bbbea; --ok:#8fd4a6; --ok-bg:#1e3327; --warn:#f0c479; --warn-bg:#3a2e17; --bad:#f2a3a3; --bad-bg:#3b1f22; } }
+* { box-sizing: border-box; }
+body { width: 300px; margin: 0; padding: 16px; font: 13px/1.45 "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif; color: var(--ink); background: var(--bg); }
+h1 { font-size: 16px; font-weight: 600; margin: 0; }
+.sub { margin: 2px 0 14px; color: var(--muted); }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+label { display: flex; flex-direction: column; gap: 4px; color: var(--muted); font-size: 12px; }
+input[type=time], input[type=text] { font: inherit; color: var(--ink); background: var(--field); border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px; }
+input:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.total { margin: 8px 0 0; color: var(--muted); font-size: 12px; }
+.err { margin: 4px 0 0; color: var(--bad); font-size: 12px; min-height: 0; }
+.err:empty { display: none; }
+.block { margin-top: 14px; }
+.hint { font-size: 11px; }
+.check { flex-direction: row; align-items: center; gap: 8px; margin: 14px 0; color: var(--ink); font-size: 13px; }
+button { width: 100%; font: inherit; font-weight: 600; color: #fff; background: var(--accent); border: 0; border-radius: 6px; padding: 9px; cursor: pointer; }
+@media (prefers-color-scheme: dark) { button { color: #0f1520; } }
+button:hover { background: var(--accent-hover); }
+button[disabled] { opacity: .6; cursor: progress; }
+#status { margin-top: 12px; font-size: 12px; border-radius: 6px; }
+#status:empty { display: none; }
+#status.ok, #status.warn, #status.error, #status.busy { padding: 8px 10px; }
+#status.ok { background: var(--ok-bg); color: var(--ok); }
+#status.warn { background: var(--warn-bg); color: var(--warn); }
+#status.error { background: var(--bad-bg); color: var(--bad); }
+#status.busy { background: var(--field); color: var(--muted); }
+#status p { margin: 0; }
+#status p + p { margin-top: 4px; }

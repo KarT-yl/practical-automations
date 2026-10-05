@@ -3,7 +3,15 @@
 [![Checks](https://github.com/KarT-yl/practical-automations/actions/workflows/ci.yml/badge.svg)](https://github.com/KarT-yl/practical-automations/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Small tools that remove repetitive work and turn information into something useful. Each project includes instructions, examples, and tests. The first tool is **Amex Offers — One Click + Reports**.
+Small tools that remove repetitive work and turn information into something useful. Includes **MyTE Hours Filler** and **Amex Offers — One Click + Reports**, with source, setup instructions, and tests.
+
+## MyTE Hours Filler
+
+Fill a standard weekday schedule in MyTE's Working Hours window, skip listed days off, and review the entries before saving yourself. The original four source files are preserved alongside a separate improved version with stricter validation and local-only settings.
+
+**[Download MyTE v1.0.2](https://github.com/KarT-yl/practical-automations/releases/tag/myte-v1.0.2)** · **[Install and understand the code](tools/myte-hours/README.md)** · **[Exact original source](tools/myte-hours/original-v1.0.1)**
+
+Independent personal tool; no employer endorsement is implied. Automated validation uses synthetic pages, not a signed-in workplace session.
 
 ## Amex Offers — One Click + Reports
 
@@ -11,7 +19,7 @@ Add available offers on your selected American Express card with one click, then
 
 ![Report overview using fictional offers](docs/images/report-overview.png)
 
-**[Download the extension](https://github.com/KarT-yl/practical-automations/releases/latest)** · **[Installation and usage](tools/amex-offers/README.md)** · **[View a sample report](docs/demo-report.html)** · **[Comparison with paid tools](docs/COMPARISON.md)**
+**[Download the Amex extension](https://github.com/KarT-yl/practical-automations/releases/tag/v2.0.1)** · **[Installation and usage](tools/amex-offers/README.md)** · **[View a sample report](docs/demo-report.html)** · **[Comparison with paid tools](docs/COMPARISON.md)**
 
 The sample report is a standalone HTML file: download it and open it in your browser. Every example and screenshot uses fictional data.
 
@@ -26,7 +34,7 @@ The sample report is a standalone HTML file: download it and open it in your bro
 
 ### Install in Opera GX
 
-1. Download `amex-offers-one-click-v2.0.1.zip` from the [latest release](https://github.com/KarT-yl/practical-automations/releases/latest).
+1. Download `amex-offers-one-click-v2.0.1.zip` from the [latest release](https://github.com/KarT-yl/practical-automations/releases/tag/v2.0.1).
 2. Extract it into a permanent folder.
 3. Open `opera://extensions`, enable **Developer mode**, and choose **Load unpacked**.
 4. Select the extracted folder containing `manifest.json`, then pin the extension.
@@ -42,7 +50,7 @@ A free, open-source option for the specific **Amex enrollment + local report** w
 
 ### Practical limits
 
-Built and live-tested in Opera GX on English-language U.S. Amex pages. Uses Chromium Manifest V3 APIs; Chrome and Edge can load the same extension, but live Amex validation was in Opera GX. Site changes can break selectors. Work on one selected card at a time; this tool does not choose which card should receive an offer.
+Designed for English-language U.S. Amex pages in Chromium browsers, including Opera GX, Chrome, and Edge. Automated tests use synthetic pages; current authenticated Amex compatibility has not been verified in this update. Site changes can break selectors. Work on one selected card at a time; this tool does not choose which card should receive an offer.
 
 Reports analyze visible summaries. They do not track purchases, redemptions, remaining caps, or realized savings. Complex conditions need manual review. Always read the full terms on Amex. This project is independent and is not affiliated with American Express.
 
@@ -51,6 +59,8 @@ Reports analyze visible summaries. They do not track purchases, redemptions, rem
 ```text
 tools/amex-offers/extension/   Load this folder in your browser
 tools/amex-offers/README.md    Detailed setup and troubleshooting
+tools/myte-hours/extension/   Improved timesheet helper
+tools/myte-hours/original-v1.0.1/ Exact supplied source
 docs/                        Comparison, architecture, fictional demo
 tests/                       Calculation, UI, collector, and integration checks
 scripts/                     Test runner, demo generation, release packaging

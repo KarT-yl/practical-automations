@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "MyTE Hours Filler",
+  "version": "1.0.1",
+  "description": "Fills the MyTE Working Hours window with your standard weekday schedule.",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://myte.accenture.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Fill MyTE working hours"
+  }
+}
